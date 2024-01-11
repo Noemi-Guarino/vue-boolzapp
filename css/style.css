@@ -8,6 +8,7 @@
 .bg-container{
     background-color: #DCDBD3;
     padding: 30px;
+    height: 100vh;
 }
 
 .container{
@@ -27,12 +28,14 @@
 }
 
 .left-innercontainer{
-    border: 1px solid violet;
-    width: 50%;
+    border: 3px solid red;
+    width: 25%;
 }
 
 .right-innercontainer{
-    border: 1px solid orange;
+    border: 4px solid rgb(140, 120, 252);
+    width: 75%;
+
 }
 
 .left-top-navbar,.right-top-navbar,.right-footer{
@@ -40,6 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 2px solid green;
 }
 
 .left-notification{
@@ -60,3 +64,33 @@ i{
     border-radius: 50%;
     background-color: white;
 }
+
+.inputcontainer{
+    width: 100%;
+    height: 55px;
+    padding: 10px;
+}
+
+.inputcontainer > input {
+    width: 85%;
+    border: 0;
+    padding: 7px;
+    outline: none;
+}
+
+.right-input-message> input{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.right-main{
+    background-image: url("../img/mine.jpg");
+    border: 2px solid green;
+}
+
+.contactschat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

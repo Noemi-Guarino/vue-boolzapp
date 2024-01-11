@@ -42,12 +42,27 @@
                                     <a href="">Attiva le notifiche desktop</a>
                                 </div>                
                             </div>
-                            <div class="left-input">
-                                <i class="fas fa-search"></i>
-                                <input placeholder="Cerca"/>
+                            <div class="inputcontainer left-input-search">
+                                <span class="serachicon"><i class="fas fa-search"></i></span>
+                                <input type="search" placeholder="Cerca"/>
                             </div>
                             <div class="left-chats-list">
-                                lista chats
+                                <div class="contactschat">
+                                    <div v-for="(avatar,index) in contacts">
+                                        <img :src="contacts[index].avatar" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 v-for="(name,index) in contacts">
+                                            {{contacts[index].name}}
+                                        </h4>
+                                        <h5 v-for="(message,index) in messages">
+                                            {{contacts.messages[-1]}}
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,17 +79,23 @@
                             </div>
                         </div>
                         <div class="right-main">
-                            <div>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste obcaecati qui esse aut quis neque numquam asperiores vitae cum eveniet incidunt eligendi voluptatem, iusto officia adipisci in ducimus repudiandae quod.
+                            <div class="sentcontainer">
+                                <div class="msgsent">
+                                    Hai portato a spasso il cane?
+                                </div>
                             </div>
-
+                            <div class="recivedcontainer">
+                                <div class="msgrecived">
+                                    Tutto fatto!
+                                </div>
+                            </div>
                         </div>
                         <div class="right-footer">
                             <div>
                                 <i class="far fa-smile"></i>
                             </div>
-                            <div>
-                                <input placeholder="Cerca"/>
+                            <div class="inputcontainer right-input-message">
+                                <input type="text" placeholder="Scrivi un messaggio"/>
                             </div>
                             <div>
                                 <i class="fas fa-microphone"></i>
