@@ -136,25 +136,28 @@ img{
 
 
 .chatcontainer {
-    /* display: flex; */
-    width: 40%;
+    width: 100%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 10px;
+
+
 }
 
 .msgsent{
     background-color: #D5F9BB;
     border-radius: 20px;
     padding: 10px;
-
+    align-self: flex-end;
 }
 
 .msgrecived{
     background-color: white;
     border-radius: 20px;
     padding: 10px;
+    align-self: flex-start;
 }
 
 .sentcontainer h6{
