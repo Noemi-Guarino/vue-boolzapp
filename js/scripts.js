@@ -5,6 +5,7 @@ const { createApp } = Vue
     data() {
       return {
         activechat: 0,
+        textmessagge: '',
         contacts: [
             {
                 name: 'Michele',
@@ -173,10 +174,19 @@ const { createApp } = Vue
     methods: {
         currentchat(index) {
             this.activechat = index
+        },
+        addmessage(){
+            let obj = {
+                message:this.textmessagge,
+                status:'sent',
+                // date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            }
+            this.contacts[this.activechat].messages.push(obj);
+            console.log(obj,"questa è al nuova nota")
+            this.textmessagge = '';    
         }
     }
-
-  }).mount('#app')
+}).mount('#app')
 
 
 

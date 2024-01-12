@@ -46,6 +46,11 @@
     height: 80px;
 }
 
+.usercurrent{
+    display: flex;
+    align-items: center;
+}
+
 .left-notification{
     padding: 10px;
     background-color: #8EDAFC;
@@ -94,6 +99,7 @@ i{
 .right-main{
     background-image: url("../img/mine.jpg");
     border: 2px solid green;
+    height: calc(600px - 160px);
 }
 
 .contactschat{
@@ -106,10 +112,16 @@ i{
 
 img{
     width: 100%;
+    border-radius: 50px;
 }
 
 .contianeierimg{
     width: 30%;
+}
+
+#contianeierimgcurrentchat{
+    height: 50px;
+    width: 50px;
 }
 
 .left-chats-list{
@@ -124,14 +136,22 @@ img{
 
 
 .sentcontainer {
-    background-color: #D5F9BB;
-}
-.recivedcontainer {
-    background-color: #fff;
+    
+    display: flex;
+    width: 40%;
 }
 
-.inner-right-container{
-    height: calc(600px - 180px);
-    overflow-y: auto;
-    border: 2px solid orangered;
+.msgsent{
+    background-color: #D5F9BB;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
+
+.msgrecived{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: white;
+}
+

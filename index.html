@@ -24,7 +24,7 @@
                     <div class="left-innercontainer">
                         <div class="left-top-navbar">
                             <div class="left-usercontact">
-                                user
+                                userprofile
                             </div>
                             <div class="left-user-navbar">
                                 <i class="fas fa-spinner"></i>
@@ -73,34 +73,47 @@
                     
                     <div class="right-innercontainer">
                         <div class="right-top-navbar">
-                            <div class="left-usercontact">
-                                user
+                            <div class="usercurrent">
+                                <div id="contianeierimgcurrentchat">
+                                    <img :src="contacts[activechat].avatar"alt="{{contacts[index].name}}">
+                                </div>
+                                <div>{{contacts[activechat].name}}</div>
                             </div>
+                            <!-- <div class="left-usercontact">
+                                {{contacts[activechat].name}}
+                            </div> -->
                             <div class="left-user-navbar">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip"></i>
                                 <i class="fas fa-ellipsis-v"></i>
                             </div>
                         </div>
-                        <div class="right-main" >
-                            <div class="inner-right-container" v-for="(message,index) in contacts[activechat].messages">
-                                <div class="sentcontainer">
-                                    <div class="msgsent">
-                                        {{message.message}}
-                                    </div>
+                        <div class="right-main">
+                            <div class="sentcontainer" v-for="(message,index) in contacts[activechat].messages">
+                                <div :class="{
+                                    'msgrecived': message.status == 'received',
+                                    'msgsent': message.status == 'sent',
+                                }">
+                                {{message.message}}
                                 </div>
-                                <div class="recivedcontainer">
-                                    <div class="msgrecived">
-                                    </div>
-                                </div>
+                            
+                                
                             </div>
+                            <!-- <div class="recivedcontainer">
+                                <div class="msgrecived">
+                                    {{}}
+                                </div>
+                            </div> -->
                         </div>
                         <div class="right-footer">
                             <div>
                                 <i class="far fa-smile"></i>
                             </div>
                             <div class="inputcontainer right-input-message">
-                                <input type="text" placeholder="Scrivi un messaggio"/>
+                                <input type="text" 
+                                v-model="textmessagge"
+                                @keyup.enter="addmessage()"
+                                placeholder="Scrivi un messaggio"/>
                             </div>
                             <div>
                                 <i class="fas fa-microphone"></i>
