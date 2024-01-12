@@ -186,7 +186,7 @@ const { createApp } = Vue
 
             setTimeout(() => {
                 let okay = {
-                    // date: 'date.now()',
+                    date: '10/01/2020 15:51:00',
                     message: 'Okay!',
                     status: 'received'
                 };
