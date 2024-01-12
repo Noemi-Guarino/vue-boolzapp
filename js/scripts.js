@@ -179,12 +179,22 @@ const { createApp } = Vue
             let obj = {
                 message:this.textmessagge,
                 status:'sent',
-                // date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
             }
             this.contacts[this.activechat].messages.push(obj);
             console.log(obj,"questa è al nuova nota")
-            this.textmessagge = '';    
-        }
+            this.textmessagge = ''; 
+
+            setTimeout(() => {
+                let okay = {
+                    // date: 'date.now()',
+                    message: 'Okay!',
+                    status: 'received'
+                };
+                this.contacts[this.activechat].messages.push(okay);
+            },1000) 
+
+        },
+    
     }
 }).mount('#app')
 

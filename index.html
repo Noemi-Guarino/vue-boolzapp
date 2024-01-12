@@ -43,7 +43,9 @@
                                 </div>                
                             </div>
                             <div class="inputcontainer left-input-search">
-                                <span class="serachicon"><i class="fas fa-search"></i></span>
+                                <span class="serachicon">
+                                    <i class="fas fa-search"></i>
+                                </span>
                                 <input type="search" placeholder="Cerca"/>
                             </div>
                             <div class="left-chats-list">
@@ -96,8 +98,9 @@
                                 }">
                                 {{message.message}}
                                 </div>
-                            
-                                
+                                <span>
+                                    {{contacts[activechat].messages[index].date}}
+                                </span>
                             </div>
                             <!-- <div class="recivedcontainer">
                                 <div class="msgrecived">
