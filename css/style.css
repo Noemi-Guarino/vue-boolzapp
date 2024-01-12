@@ -135,23 +135,28 @@ img{
 }
 
 
-.sentcontainer {
-    
-    display: flex;
+.chatcontainer {
+    /* display: flex; */
     width: 40%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .msgsent{
     background-color: #D5F9BB;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    border-radius: 20px;
+    padding: 10px;
+
 }
 
 .msgrecived{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     background-color: white;
+    border-radius: 20px;
+    padding: 10px;
 }
 
+.sentcontainer h6{
+    text-align: right;
+}

@@ -46,12 +46,13 @@
                                 <span class="serachicon">
                                     <i class="fas fa-search"></i>
                                 </span>
-                                <input type="search" placeholder="Cerca"/>
+                                <input type="search" @keyup="search" v-model="searchcontact" placeholder="Cerca"/>
                             </div>
                             <div class="left-chats-list">
                                 <div class="contactschat" 
                                 v-for="(contact,index) in contacts"
                                 :class="{'active': index == activechat}"
+                                v-show="contact.visible == true"
                                 @click="currentchat(index)">
                                     <div class="contianeierimg" >
                                         <img :src="contacts[index].avatar"alt="{{contacts[index].name}}">
@@ -66,7 +67,7 @@
                                         </h5> 
                                     </div>
                                     <div>
-                                        date
+                                        <!-- date -->
                                     </div>
                                 </div>
                             </div>
@@ -91,22 +92,17 @@
                             </div>
                         </div>
                         <div class="right-main">
-                            <div class="sentcontainer" v-for="(message,index) in contacts[activechat].messages">
+                            <div class="chatcontainer" v-for="(message,index) in contacts[activechat].messages">
                                 <div :class="{
                                     'msgrecived': message.status == 'received',
                                     'msgsent': message.status == 'sent',
                                 }">
+                                <h6>
+                                    {{contacts[activechat].messages[index].date}}
+                                </h6>
                                 {{message.message}}
                                 </div>
-                                <span>
-                                    {{contacts[activechat].messages[index].date}}
-                                </span>
                             </div>
-                            <!-- <div class="recivedcontainer">
-                                <div class="msgrecived">
-                                    {{}}
-                                </div>
-                            </div> -->
                         </div>
                         <div class="right-footer">
                             <div>

@@ -6,6 +6,7 @@ const { createApp } = Vue
       return {
         activechat: 0,
         textmessagge: '',
+        searchcontact:'',
         contacts: [
             {
                 name: 'Michele',
@@ -192,13 +193,29 @@ const { createApp } = Vue
                 };
                 this.contacts[this.activechat].messages.push(okay);
             },1000) 
-
         },
-    
-    }
+        search(){
+            // console.log(this.searchcontact);
+            this.contacts.forEach(contact => {
+                if (contact.name.toLowerCase().includes(this.searchcontact.toLowerCase().trim())){
+                    contact.visible = true;
+                }else{
+                    contact.visible = false;
+                }    
+            });
+            
+            // let nome = 'noemi';
+            // let array = ['n','o','e','m','i']
+            // console.log(nome[2]);
+            // for (let i = 0; i < contacts.length; i++) {
+            //     if (contacts[i].name == contacts.includes(contacts.length)){
+            //         visible == true;
+            //     }else{
+            //         visible == false;
+            //     }    
+            // }    
+    }}
 }).mount('#app')
-
-
 
 
 
