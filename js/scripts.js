@@ -204,16 +204,6 @@ const { createApp } = Vue
                 }    
             });
             
-            // let nome = 'noemi';
-            // let array = ['n','o','e','m','i']
-            // console.log(nome[2]);
-            // for (let i = 0; i < contacts.length; i++) {
-            //     if (contacts[i].name == contacts.includes(contacts.length)){
-            //         visible == true;
-            //     }else{
-            //         visible == false;
-            //     }    
-            // }    
     }}
 }).mount('#app')
 
