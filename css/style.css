@@ -34,6 +34,7 @@
 .right-innercontainer{
     border: 4px solid rgb(140, 120, 252);
     width: 75%;
+    height: 600px;
 }
 
 .left-top-navbar,.right-top-navbar,.right-footer{
@@ -112,7 +113,25 @@ img{
 }
 
 .left-chats-list{
-    height: calc(600px - 220px);
-    border: 2px solid salmon;
+    height: calc(600px - 220px - 5px);
+    /* border: 2px solid salmon; */
     overflow-y: auto;
+}
+
+.active {
+    background-color: #D5F9BB;
+}
+
+
+.sentcontainer {
+    background-color: #D5F9BB;
+}
+.recivedcontainer {
+    background-color: #fff;
+}
+
+.inner-right-container{
+    height: calc(600px - 180px);
+    overflow-y: auto;
+    border: 2px solid orangered;
 }

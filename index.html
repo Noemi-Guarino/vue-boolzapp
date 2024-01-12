@@ -47,7 +47,10 @@
                                 <input type="search" placeholder="Cerca"/>
                             </div>
                             <div class="left-chats-list">
-                                <div class="contactschat" v-for="(contact,index) in contacts">
+                                <div class="contactschat" 
+                                v-for="(contact,index) in contacts"
+                                :class="{'active': index == activechat}"
+                                @click="currentchat(index)">
                                     <div class="contianeierimg" >
                                         <img :src="contacts[index].avatar"alt="{{contacts[index].name}}">
                                     </div>
@@ -79,15 +82,16 @@
                                 <i class="fas fa-ellipsis-v"></i>
                             </div>
                         </div>
-                        <div class="right-main">
-                            <div class="sentcontainer">
-                                <div class="msgsent">
-                                    Hai portato a spasso il cane?
+                        <div class="right-main" >
+                            <div class="inner-right-container" v-for="(message,index) in contacts[activechat].messages">
+                                <div class="sentcontainer">
+                                    <div class="msgsent">
+                                        {{message.message}}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="recivedcontainer">
-                                <div class="msgrecived">
-                                    Tutto fatto!
+                                <div class="recivedcontainer">
+                                    <div class="msgrecived">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +105,6 @@
                             <div>
                                 <i class="fas fa-microphone"></i>
                             </div>
-
                         </div>
                     </div>
                 </div>
