@@ -115,18 +115,13 @@ i{
     padding: 1px;
 }
 
-.contianeierimg{
-    width: 40px;
-    height: 40px;
-}
-
 .single-left-chats{
     display: flex;
     align-items: center;
 }
 
 .info-chats{
-    padding: 20px;
+    padding: 10px;
 }
 
 .leftdatechats> span{
@@ -156,7 +151,7 @@ i{
     padding: 10px;
 }
 
-#contianeierimgcurrentchat{
+#contianeierimgcurrentchat, .contianeierimg{
     height: 50px;
     width: 50px;
 }
@@ -191,4 +186,18 @@ i{
 .right-input-message> input{
     width: 100%;
     border-radius: 10px;
+}
+
+.dropdown-msg {
+    display: none;
+    position: absolute;
+    width: 100px;
+    padding: 10px 5px;
+    transform: translatex(-85px);
+    top: 18px;
+    background-color: #fff;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px,
+    rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
+    
 }

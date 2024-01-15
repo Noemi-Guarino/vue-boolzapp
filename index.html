@@ -51,11 +51,11 @@
                                 </span>
                                 <input type="search" @keyup="search" v-model="searchcontact" placeholder="Cerca"/>
                             </div>
-                            <div class="left-chats-list">
-                                <div class="contactschat" 
+                            <div class="left-chats-list" >
+                                <div class="contactschat"
+                                :class=" index ==  activechat ? 'active' : '' "
                                 v-show="contact.visible == true"
                                 v-for="(contact,index) in contacts"
-                                :class=" index ==  activechat ? 'active' : '' "
                                 @click="currentchat(index)">
                                     <div class="single-left-chats">
                                         <div class="contianeierimg" >
@@ -103,10 +103,22 @@
                                     'msgrecived': message.status == 'received',
                                     'msgsent': message.status == 'sent',
                                 }">
-                                <h6>
-                                    {{contacts[activechat].messages[index].date}}
-                                </h6>
-                                {{message.message}}
+                                    <h6>
+                                        {{contacts[activechat].messages[index].date}}
+                                    </h6>
+                                    <span>
+                                        {{message.message}}
+                                    </span>
+                                    <span>
+                                        <i @click="showDrop(drop)" class="fas fa-chevron-down">
+                                            <div class="dropdown-msg">
+                                                <ul>
+                                                    <li>Info</li>
+                                                    <i class="fas fa-trash"></i>
+                                                </ul>
+                                            </div>
+                                        </i>
+                                    </span>                  
                                 </div>
                             </div>
                         </div>

@@ -224,7 +224,7 @@ const { createApp } = Vue
             finalLocaldate += now.getSeconds().toString().padStart(2, '0');
 
         return finalLocaldate;
-        }
+        },
     }
 }).mount('#app')
 
