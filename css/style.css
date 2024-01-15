@@ -72,7 +72,6 @@ img{
     padding: 10px;
     background-color: #8EDAFC;
     display: flex;
-    justify-content: space-between;
     height: 70px;
     /* border: 2px solid rgb(128, 55, 0); */
 }
@@ -96,7 +95,7 @@ img{
     outline: none;
 }
 
-.active {
+.contactschat.active {
     background-color: #D5F9BB;
 }
 
@@ -113,6 +112,7 @@ i{
     text-align: center;
     vertical-align: 30px;
     padding: 1px;
+    margin-right: 10px;
 }
 
 .single-left-chats{
