@@ -24,7 +24,10 @@
                     <div class="left-innercontainer">
                         <div class="left-top-navbar">
                             <div class="left-usercontact">
-                                userprofile
+                               <div class="contianeierimg">
+                                    <img src="img/avatar_io.jpg" alt="">
+                               </div>
+                               <div>Sofia</div>
                             </div>
                             <div class="left-user-navbar">
                                 <i class="fas fa-spinner"></i>
@@ -50,24 +53,27 @@
                             </div>
                             <div class="left-chats-list">
                                 <div class="contactschat" 
-                                v-for="(contact,index) in contacts"
-                                :class="{'active': index == activechat}"
                                 v-show="contact.visible == true"
+                                v-for="(contact,index) in contacts"
+                                :class=" index ==  activechat ? 'active' : '' "
                                 @click="currentchat(index)">
-                                    <div class="contianeierimg" >
-                                        <img :src="contacts[index].avatar"alt="{{contacts[index].name}}">
+                                    <div class="single-left-chats">
+                                        <div class="contianeierimg" >
+                                            <img :src="contacts[index].avatar"alt="{{contacts[index].name}}">
+                                        </div>
+                                        <div class="info-chats">
+                                            <h4>
+                                                {{contacts[index].name}}
+                                            </h4>
+                                            <span>
+                                                {{contact.messages[contact.messages.length - 1].message}}
+                                            </span> 
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4>
-                                            {{contacts[index].name}}
-                                        </h4>
-                                        <h5>
-                                            <!-- {{contacts.messages[contacts.messages.length -
-                                                1].messages}} -->
-                                        </h5> 
-                                    </div>
-                                    <div>
-                                        <!-- date -->
+                                    <div class="leftdatechats">
+                                        <span>
+                                            {{contact.messages[contact.messages.length - 1].date}}
+                                        </span>
                                     </div>
                                 </div>
                             </div>

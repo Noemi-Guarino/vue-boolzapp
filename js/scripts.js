@@ -179,6 +179,7 @@ const { createApp } = Vue
         addmessage(){
             let obj = {
                 message:this.textmessagge,
+                date: this.Localdate(),
                 status:'sent',
             }
             this.contacts[this.activechat].messages.push(obj);
@@ -187,7 +188,7 @@ const { createApp } = Vue
 
             setTimeout(() => {
                 let okay = {
-                    date: '10/01/2020 15:51:00',
+                    date: this.Localdate(),
                     message: 'Okay!',
                     status: 'received'
                 };
@@ -202,19 +203,29 @@ const { createApp } = Vue
                 }else{
                     contact.visible = false;
                 }    
-            });
-            
-            // let nome = 'noemi';
-            // let array = ['n','o','e','m','i']
-            // console.log(nome[2]);
-            // for (let i = 0; i < contacts.length; i++) {
-            //     if (contacts[i].name == contacts.includes(contacts.length)){
-            //         visible == true;
-            //     }else{
-            //         visible == false;
-            //     }    
-            // }    
-    }}
+            })
+        },
+        Localdate(){
+            let finalLocaldate = '';
+            const now = new Date ();
+
+            finalLocaldate += now.getDate().toString().padStart(2, '0');
+            finalLocaldate += '/';
+            finalLocaldate += (now.getMonth() + 1).toString().padStart(2, '0'); /* nowMonth + 1 perchè mesi partono da 0 */ 
+            finalLocaldate += '/';
+            finalLocaldate += now.getFullYear();
+
+            finalLocaldate += ' '; 
+
+            finalLocaldate += now.getHours().toString().padStart(2, '0');
+            finalLocaldate += ':';
+            finalLocaldate += now.getMinutes().toString().padStart(2, '0');
+            finalLocaldate += ':';
+            finalLocaldate += now.getSeconds().toString().padStart(2, '0');
+
+        return finalLocaldate;
+        }
+    }
 }).mount('#app')
 
 

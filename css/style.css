@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,9 +27,16 @@
     flex-direction: row;
 }
 
+img{
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* GENERAL SECTION (RIGHT AND LEFT) */
+
 .left-innercontainer{
     border: 3px solid rgb(0, 255, 255);
-    width: 25%;
+    width: 35%;
     height: 600px;
 }
 
@@ -46,9 +55,17 @@
     height: 80px;
 }
 
-.usercurrent{
+/* LEFT SECTION - CHATS */
+
+.left-usercontact{
     display: flex;
     align-items: center;
+}
+
+.left-chats-list{
+    height: calc(600px - 220px - 5px);
+    /* border: 2px solid salmon; */
+    overflow-y: auto;
 }
 
 .left-notification{
@@ -65,18 +82,6 @@
     height: 70px;
 }
 
-i{
-    color: #B1B1B1;
-    margin: 5px;
-}
-
-#bell{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: white;
-}
-
 .inputcontainer{
     width: 100%;
     border: 1px solid red;
@@ -91,15 +96,56 @@ i{
     outline: none;
 }
 
-.right-input-message> input{
-    width: 100%;
-    border-radius: 10px;
+.active {
+    background-color: #D5F9BB;
+}
+
+i{
+    color: #B1B1B1;
+    margin: 5px;
+}
+
+#bell{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    vertical-align: 30px;
+    padding: 1px;
+}
+
+.contianeierimg{
+    width: 40px;
+    height: 40px;
+}
+
+.single-left-chats{
+    display: flex;
+    align-items: center;
+}
+
+.info-chats{
+    padding: 20px;
+}
+
+.leftdatechats> span{
+    font-size: 0.5em;
+}
+
+/* RIGHT SECTION */
+.usercurrent, .left-user-navbar{
+    display: flex;
+    align-items: center;
 }
 
 .right-main{
     background-image: url("../img/mine.jpg");
     border: 2px solid green;
     height: calc(600px - 160px);
+    padding: 20px;
+    overflow-y: auto;
+
 }
 
 .contactschat{
@@ -110,30 +156,10 @@ i{
     padding: 10px;
 }
 
-img{
-    width: 100%;
-    border-radius: 50px;
-}
-
-.contianeierimg{
-    width: 30%;
-}
-
 #contianeierimgcurrentchat{
     height: 50px;
     width: 50px;
 }
-
-.left-chats-list{
-    height: calc(600px - 220px - 5px);
-    /* border: 2px solid salmon; */
-    overflow-y: auto;
-}
-
-.active {
-    background-color: #D5F9BB;
-}
-
 
 .chatcontainer {
     width: 100%;
@@ -142,8 +168,6 @@ img{
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;
-
-
 }
 
 .msgsent{
@@ -162,4 +186,9 @@ img{
 
 .sentcontainer h6{
     text-align: right;
+}
+
+.right-input-message> input{
+    width: 100%;
+    border-radius: 10px;
 }
