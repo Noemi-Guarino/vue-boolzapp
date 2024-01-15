@@ -22,7 +22,7 @@
 
 .innercontainer{
     background-color: #EAEAEA;
-    border: 2px dashed red;
+    /* border: 2px dashed red; */
     display: flex;
     flex-direction: row;
 }
@@ -35,13 +35,13 @@ img{
 /* GENERAL SECTION (RIGHT AND LEFT) */
 
 .left-innercontainer{
-    border: 3px solid rgb(0, 255, 255);
+    /* border: 3px solid rgb(0, 255, 255); */
     width: 35%;
     height: 600px;
 }
 
 .right-innercontainer{
-    border: 4px solid rgb(140, 120, 252);
+    /* border: 4px solid rgb(140, 120, 252); */
     width: 75%;
     height: 600px;
 }
@@ -51,7 +51,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid rgb(0, 0, 0);
+    /* border: 3px solid rgb(0, 0, 0); */
     height: 80px;
 }
 
@@ -63,7 +63,7 @@ img{
 }
 
 .left-chats-list{
-    height: calc(600px - 220px - 5px);
+    height: calc(600px - 220px);
     /* border: 2px solid salmon; */
     overflow-y: auto;
 }
@@ -83,7 +83,7 @@ img{
 
 .inputcontainer{
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     align-items: center;
 }
@@ -136,7 +136,7 @@ i{
 
 .right-main{
     background-image: url("../img/mine.jpg");
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: calc(600px - 160px);
     padding: 20px;
     overflow-y: auto;
@@ -188,16 +188,19 @@ i{
     border-radius: 10px;
 }
 
-.dropdown-msg {
-    display: none;
-    position: absolute;
-    width: 100px;
-    padding: 10px 5px;
-    transform: translatex(-85px);
-    top: 18px;
-    background-color: #fff;
-    font-size: 14px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 0px,
-    rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
-    
+button{
+background: none repeat scroll 0 0 transparent;
+border: medium none;
+border-spacing: 0;
+color: #26589F;
+font-family: 'PT Sans Narrow',sans-serif;
+font-size: 12px;
+font-weight: normal;
+line-height: 1.42rem;
+list-style: none outside none;
+margin: 0;
+padding: 0;
+text-align: left;
+text-decoration: none;
+text-indent: 0;
 }
