@@ -211,7 +211,7 @@ const { createApp } = Vue
 
             finalLocaldate += now.getDate().toString().padStart(2, '0');
             finalLocaldate += '/';
-            finalLocaldate += (now.getMonth() + 1).toString().padStart(2, '0'); /* nowMonth + 1 perchè mesi partono da 0 */ 
+            finalLocaldate += (now.getMonth() + 1).toString().padStart(2, '0');
             finalLocaldate += '/';
             finalLocaldate += now.getFullYear();
 
